@@ -237,10 +237,14 @@ div.pickStopwatch{
         column-gap: 20px;
     }
     div.pickTimer{
-        width:120px;
+        width:auto;
+        font-size: 25px;
+        height: auto;
     }
     div.pickStopwatch{     
-        width: 170px;
+        width: auto;
+        font-size: 25px;
+        height: auto;
     }
     #wrapper{
         margin-top:max(40vh);
