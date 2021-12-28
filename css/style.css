@@ -1,0 +1,282 @@
+ html{
+    height: 100%;
+    width: 100%;
+    padding-right:0px;
+    margin-right: 0;
+}
+body{
+    background-color: rgb(149, 132, 168);
+    min-height: 100vh;
+    width: 100%;
+    padding-right:0px;
+}
+
+* { /*das sternchen muss man immer machen damit die ganze seite ausgefüllt wird.*/
+    margin:0px;
+}
+div.allStopwatchDivs{
+    height: 200px;
+    opacity: 100%;
+    top:00px;
+    position: static;
+    display:grid;
+    row-gap: 10px;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    visibility:hidden;
+}
+
+div.ZeitAnzeige{
+    width:470px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    font-size:80px;
+    text-align: center; 
+    border-radius: 30px;
+    font-family: Arial;
+}
+div.AllButtons{
+    width: 470px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+div.btnStart{
+    background-color: rgb(30, 210, 105);
+}
+.btnStart:hover{
+    background-color: rgb(27, 161, 83);
+
+}
+
+div.btnStop{
+    background-color: rgb(226, 67, 67);
+}
+.btnStop:hover{
+    background-color: rgb(156, 47, 47);
+}
+
+div.btnReset{
+    background-color: rgb(66, 66, 65);
+}
+.btnReset:hover{
+    background-color: rgb(37, 37, 37);
+}
+.button{
+    width:150px;
+    height: 70px;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 30px;
+}
+div.AllTimerElements{
+    height: 200px;
+    top:00px;
+    position: static;
+    display:grid;
+    row-gap: 10px;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    visibility:hidden;
+    margin-left:-470px;
+}
+
+#inputs{
+    font-size:80px;
+    text-align: center;
+    width:470px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    height: 100px;
+}
+input.TimerInput{
+    width: 120px;
+    background-color: rgb(255, 255, 255);
+    font-size:80px;
+    text-align: center; 
+    border-radius: 30px;
+    border-width: 0px;
+    font-family: arial;
+}
+
+li{
+    background-color: rgb(253, 245, 209);
+    border-radius: 5px;
+    margin-left: -40px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    list-style: none;
+    padding: 5px;
+}
+li span{
+    font-size: 20px;
+    border-color: rgb(145, 93, 51);
+}
+#deleteRounds{
+    width: 150px;
+    background-color: rgb(118, 95, 201);
+    border-radius: 10px;
+    text-align: center;
+    margin-left:160px;
+    font-size: 23px;
+    height: 30px;
+}
+#deleteRounds:hover{
+    background-color: rgb(90, 72, 153);
+}
+div.AllTimerButtons{
+    width: 470px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+
+
+div.btnStartTimer{
+    background-color: rgb(30, 210, 105);
+}
+.btnStartTimer:hover{
+    background-color: rgb(27, 161, 83);
+
+}
+
+div.btnRoundsTimer{
+    background-color: rgb(226, 67, 67);
+}
+.btnRoundsTimer:hover{
+    background-color: rgb(156, 47, 47);
+
+}
+
+div.btnResetTimer{
+    background-color: rgb(66, 66, 65);
+}
+.btnResetTimer:hover{
+    background-color: rgb(37, 37, 37);
+}
+
+
+
+div.everything{
+    background-color: rgb(149, 132, 168);
+    height: 100vh;
+}
+
+
+div.ppick{
+    height:60px;
+    top:90px;
+    position: absolute;
+    min-width: 100%;
+}
+p.pickbetween{
+    text-align: center;
+    font-size: max( 30px);
+    color: rgb(83, 18, 18);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#pickContainer{
+    width: 340px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 150px 150px;
+    margin-top: 20px;
+    top: 200px;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position:relative;
+    column-gap: 40px;
+    
+}
+
+div.pickTimer{
+    background-color:rgb(95, 158, 160);
+    width: 150px;
+    text-align: center;
+    border-radius: 30px;
+    height: 60px;
+    font-size: 40px;
+}
+
+div.pickStopwatch{
+    background-color:cadetblue;
+    width: 200px;
+    text-align: center;
+    border-radius: 30px;
+    height: 60px;
+    font-size: 40px;
+}
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-top:max(30vh);
+}
+@media all and (max-width: 500px){
+
+    #pickContainer{
+        top:240px;
+    }
+    div.AllTimerElements{
+        margin-left:-280px;
+    }
+    div.ppick{
+        font-size: 25px; 
+        margin-right: 0px;
+        padding-right: 0px;
+        width: auto;
+    }
+    #pickContainer{
+        margin-top: 0px;
+        column-gap: 20px;
+    }
+    div.pickTimer{
+        width:120px;
+    }
+    div.pickStopwatch{     
+        width: 170px;
+    }
+    #wrapper{
+        margin-top:max(40vh);
+    }
+    div.AllTimerButtons{
+        width: 280px;
+    }
+    input.TimerInput{
+        width: 90px;
+        font-size:70px;
+    }
+    #inputs{
+        width:280px;
+        height: 90px;
+    }
+    .button{
+        width:auto;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+    #deleteRounds{
+        margin-left: 60px;
+    }
+
+
+
+    div.ZeitAnzeige{
+        width: 280px;
+        height: 90px;
+        font-size:70px;
+    }
+    div.AllButtons{
+        width: 280px;
+    }
+    #wrapper{
+        margin-top:max(40vh);
+    }
+}

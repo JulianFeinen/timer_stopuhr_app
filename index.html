@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="manifest" href="/manifest.json">
+       <script src="js/timer_stopuhr_app.js"></script>
+    </head>
+    <body>
+        <div class="everything">
+            <div class="ppick"><p class="pickbetween">pick between timer and stopwatch</p></div>
+            <div id="pickContainer">
+                <div id="pickTimerID" class="pickTimer" onclick="pickTimer()">Timer</div>
+                <div id="pickStopwatchID" class="pickStopwatch" onclick="pickStopwatch()">Stopwatch</div>
+            </div>
+            <div id="wrapper">
+                <div id="allStopwatchDivsID" class="allStopwatchDivs">
+                    <div class="ZeitAnzeige" id="ZeitAnzeige">00:00:00</div>
+                    <div class="AllButtons">
+                        <div class="btnStart button" id="btnStart" onclick="btnStart()">Start</div>
+                        <div class="btnStop button" id="btnStop" onclick="btnStop()">Stop</div>
+                        <div class="btnReset button" id="btnReset" onclick="btnReset()">Reset</div>
+                    </div>
+                </div>
+                <div id="AllTimerElementsID" class="AllTimerElements">
+                    <div id="inputs">
+                        <input type="number" onchange="checkvalue()" minlength="2" min="00" max="60" ondrop="return false;" maxlength="2" class="TimerInput" id="TimerInputL" value="00"></input>
+                        <input type="number" onchange="checkvalue()" minlength="2" min="00" max="60" ondrop="return false;" maxlength="2" class="TimerInput" id="TimerInputM" value="00"></input>
+                        <input type="number" onchange="checkvalue()" minlength="2" min="00" max="60" ondrop="return false;" maxlength="2" class="TimerInput" id="TimerInputR" value="00"></input>
+                    </div>
+                
+                    <div class="AllTimerButtons">
+                        <div class="btnStartTimer button" id="btnStartTimer" onclick="btnStartTimer()">Start</div>
+                        <div class="btnRoundsTimer button" id="btnRoundsTimer" onclick="btnRoundsTimer()">Rounds</div>
+                        <div class="btnResetTimer button" id="btnResetTimer" onclick="btnResetTimer()">Reset</div>
+                    </div>
+                    <div onclick="deleteRounds()" id="deleteRounds">delete rounds</div>
+                    <ol id="listForRounds"></ol>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
